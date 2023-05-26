@@ -14,9 +14,16 @@ app.use(express.json());
 
 // Establecemos las rutas para nuestros endpoints
 // Cada ruta se enlaza con su correspondiente controlador de API
+console.log('GET /realizar-compra');
 app.use('/realizar-compra', realizarCompra);
+
+console.log('POST /guardar-carrito');
 app.use('/guardar-carrito', guardarCarrito);
+
+console.log('PUT /actualizar-estado-compra');
 app.use('/actualizar-estado-compra', actualizarEstadoCompra);
+
+console.log('POST /validar-tarjeta');
 app.use('/validar-tarjeta', validarTarjeta);
 
 // Inicio del servidor en el puerto 3000
